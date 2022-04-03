@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router,  Route, Routes } from 'react-router-dom'
 import { CreateUser } from './CreateUser'
-// import UserList from './userList'
+import UserList from './userList'
  import Profile from './profile'
  import EditUser from './editUser'
  import EditProfile from './editProfile'
@@ -55,7 +55,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route exact path="/" element={<Dashboard users={users} setUsers={setUsers} />} />
-                   {/* <Route exact path="/users" element={<UserList  users={users} setUsers={setUsers}/>} />*/}
+                   <Route exact path="/users" element={<UserList  users={users} setUsers={setUsers}/>} />
                     <Route exact path="/create-user" element={<CreateUser  users={users} setUsers={setUsers}/>} />
                      <Route exact path="/profile/:userId" element={<Profile users={users} setUsers={setUsers}/>} />
                     <Route exact path="/edit-user/:editId" element={<EditUser users={users} setUsers={setUsers} />} />
